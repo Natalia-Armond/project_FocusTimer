@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Página principal do FocusTimer: Pomodoro simples para foco -->
+<head>
+  <!-- Metadados e links de estilo -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTimer — BabyDev</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 1a11 11 0 1 0 11 11A11.013 11.013 0 0 0 12 1m0 2a9 9 0 1 1-9 9a9.01 9.01 0 0 1 9-9m-1 3h2v7h-2zm1 8.25a1.75 1.75 0 1 0 1.75 1.75A1.75 1.75 0 0 0 12 14.25'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Conteúdo principal da aplicação -->
+  <main class="container">
+  <!-- Cabeçalho com título e subtítulo -->
+    <header class="header">
+      <h1>FocusTimer</h1>
+      <p class="subtitle">Pomodoro simples e elegante para foco máximo</p>
+    </header>
+
+    <section class="timer-card">
+  <!-- Exibe o tempo restante -->
+      <div class="time-display" id="time">25:00</div>
+
+      <div class="controls">
+  <!-- Botões de controle do timer -->
+        <button id="startBtn" class="btn primary">Iniciar</button>
+        <button id="pauseBtn" class="btn">Pausar</button>
+        <button id="resetBtn" class="btn danger">Zerar</button>
+      </div>
+
+      <div class="modes">
+  <!-- Botões para modos rápidos: Foco e Pausa -->
+        <button data-minutes="25" class="chip active">Foco 25'</button>
+        <button data-minutes="5" class="chip">Pausa 5'</button>
+        <button data-minutes="15" class="chip">Pausa 15'</button>
+      </div>
+
+      <details class="custom-setup">
+  <!-- Formulário para personalizar tempo da sessão -->
+        <summary>Personalizar sessão</summary>
+        <form id="customForm">
+          <label>Minutos
+            <input type="number" id="customMinutes" min="1" max="180" value="30" />
+          </label>
+          <label>Segundos
+            <input type="number" id="customSeconds" min="0" max="59" value="0" />
+          </label>
+          <button class="btn" type="submit">Aplicar</button>
+        </form>
+      </details>
+
+      <div class="session-info">
+  <!-- Informações sobre sessões concluídas e preferências -->
+        <span>Sessões concluídas hoje: <strong id="sessionsCount">0</strong></span>
+  <button id="resetSessionsBtn" class="btn">Zerar sessões</button>
+        <label class="toggle">
+          <input type="checkbox" id="soundToggle" checked />
+          <span>Som</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="notifyToggle" />
+          <span>Notificações</span>
+        </label>
+        <label class="toggle">
+          <input type="file" id="audioFileInput" accept="audio/*" />
+          <span>Escolher música de notificação</span>
+        </label>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <!-- Rodapé da página -->
+      <small>Feito para o Concurso DevClub — Categoria BabyDev</small>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+  <!-- Script principal da aplicação -->
+</body>
+</html>
