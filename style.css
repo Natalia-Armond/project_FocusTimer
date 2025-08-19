@@ -233,6 +233,3 @@ input[type=number] {
 			font-size: 0.95rem;
 		}
 	}
-}
-@media (max-width:520px){
-    .time-display{font-size:3.5rem}}
