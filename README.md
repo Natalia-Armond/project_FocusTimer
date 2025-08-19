@@ -11,7 +11,7 @@ Com interface intuitiva, personalização de notificações e visual responsivo,
 
 ## 📸 Mockup do Projeto
 
-![Mockup do FocusTimer](./img/mockup-focus-timer.png)
+![Mockup do FocusTimer](img/mockup-focus-timer.png)
 
 ---
 
